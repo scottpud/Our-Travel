@@ -181,3 +181,33 @@ footer a:hover {
 #latest-post .button:hover {
     background-color: #0056b3;
 }
+
+
+/* Styling for posts */
+.post {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.post p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.post small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #888;
+}

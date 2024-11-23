@@ -1,13 +1,29 @@
-// Listen for form submission
-document.getElementById('post-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Correct syntax to prevent page refresh
+// Step 1: Select the form and post list elements
 
-    // Retrieve form values (optional example of further steps)
-    const title = document.getElementById('title').value;
-    const date = document.getElementById('date').value;
-    const excerpt = document.getElementById('excerpt').value;
-    const link = document.getElementById('link').value;
+const form = document.getElementById('new-post-form');
+const postList = document.getElementById('post-list');
 
-    // Log the values to the console
-    console.log('Post Submitted:', { title, date, excerpt, link });
+// Step 2: Add event listiner for submit
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const title = document.getElementById('post-title').value
+    const content = document.getElementById('post-content').value
+    const author = document.getElementById('post-author').value
+
+    const post = document.createElement('div');
+    post.classList.add('post')
+    post.innerHTML = `
+        <h4>${title}</h4>
+        <p>${content}</p>
+        <small>By ${author}</small>
+
+    `;
+
+    postList.appendChild(post);
+
+    form.reset();
 });
+
+

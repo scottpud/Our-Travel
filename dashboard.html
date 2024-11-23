@@ -15,19 +15,50 @@
 
         <nav>
             <a href="../index.html" class="button">Home</a>
-            <a href="gallery/gallery.html" class="button">Add a post</a>
-            <a href="map/map.html" class="button">Add a photo</a>
+            <a href="add-post.html" class="button">Add a Post</a>
+            <a href="add-photo.html" class="button">Add a Photo</a>
         </nav>
         <hr>
 
-        <h1>This page is a work in progress</h1>
-    </div>
+        <section>
+            <h2>Manage Posts</h2>
+            <p>Here you can add, edit, or delete posts. (Feature coming soon!)</p>
 
-    
+            <form id="new-post-form">
+                <label for="post-title">Title:</label>
+                <input type="text" id="post-title" placeholder="Enter post title" required><br><br>
+
+                <label for="post-content">Content:</label>
+                <textarea id="post-content" placeholder="Enter content." rows="4" required></textarea><br><br>
+
+                <label for="post-author">Author:</label>
+                <input type="text" id="post-author"><br><br>
+
+                <button type="submit">Add Post</button>
+
+            </form>
+
+            <div id="post-list">
+                <h3>Posts</h3>
+                <h4>No posts yet</h4>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Manage Photos</h2>
+            <p>Here you can add photos to the gallery. (Feature coming soon!)</p>
+
+            
+        </section>
+        
+    </div>
 
     <footer>
         <p>&copy; 2024 Ruby and Scott. ❤️</p>
-        <a href="dashboard.html">Dashboard</a>
+        <a href="../index.html">Home</a>
     </footer>
+
+    <script src="/scripts/dashboard.js"></script>
 </body>
 </html>
